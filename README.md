@@ -31,7 +31,8 @@ at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetEnumerator(
 at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
 at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
 at Program.<<Main>$>g__GetEntity|0_7(DbContextOptions`1 dbContextOptions, Entity existingEntity, Expression`1 predicate)
-at Program.<Main>$(String[] args)```
+at Program.<Main>$(String[] args)
+```
 
 # Recreation steps
 
