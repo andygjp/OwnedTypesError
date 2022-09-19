@@ -32,3 +32,10 @@ at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
 at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
 at Program.<<Main>$>g__GetEntity|0_7(DbContextOptions`1 dbContextOptions, Entity existingEntity, Expression`1 predicate)
 at Program.<Main>$(String[] args)```
+
+# Recreation steps
+
+1. Run through this using v6.0.9 - no error.
+2. Comment out the v6.0.9 package references, in the csproj file, and uncomment the rc1 package references.
+3. Restore and rebuild the project.
+4. Run - System.InvalidOperationException thrown inside RelationalSqlTranslatingExpressionVisitor.TryRewriteEntityEquality
