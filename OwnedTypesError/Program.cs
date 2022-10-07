@@ -102,6 +102,10 @@ internal enum DataSourceType
 
 internal class Context : DbContext
 {
+    protected Context() : this(new DbContextOptionsBuilder<Context>().UseSqlite().Options)
+    {
+    }
+
     public Context(DbContextOptions<Context> options) : base(options)
     {
     }
@@ -112,6 +116,7 @@ internal class Context : DbContext
     {
         modelBuilder.Entity<Entity>().HasKey(x => x.EntityID);
         var ownedNavigationBuilder = modelBuilder.Entity<Entity>().OwnsOne(x => x.OwnedOne);
+        // modelBuilder.Entity<Entity>().Navigation(x => x.OwnedOne).IsRequired();
         var mutableForeignKey = ownedNavigationBuilder.Metadata;
         Console.WriteLine(mutableForeignKey);
         var mutableEntityType = ownedNavigationBuilder.OwnedEntityType;

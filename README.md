@@ -1,5 +1,7 @@
 # README
 
+The issue, https://github.com/dotnet/efcore/issues/29142, has been fixed. You can try out the fix in the [daily builds](https://github.com/dotnet/efcore/blob/main/docs/DailyBuilds.md).
+
 Program that demonstrates error thrown in rc1 ef core.
 
 Stack trace:
